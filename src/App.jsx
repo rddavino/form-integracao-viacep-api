@@ -1,9 +1,10 @@
+import ContactForm from './components/forms/ContactForm';
 
 function App() {
 
   return (
     <>
-    <h1 className="text-red-500">Olá mundo!</h1>
+      <ContactForm />
     </>
   )
 }
