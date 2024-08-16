@@ -9,7 +9,7 @@ const InputField = ({ type, fieldName, placeholder, disabled }) => {
   return (
     <input
       className={`w-full bg-stone-700 pl-3 pr-3 h-12 text-white rounded-md border-none font-bold
-        ${disabled ? "bg-opacity-20 text-opacity-30" : ""} ${errors ? "ring-offset-0 ring-2 ring-red-500" : ""}`}
+        ${disabled ? "bg-opacity-20 text-opacity-30" : ""}`}
       type={type}
       placeholder={placeholder}
       {...register(`${fieldName}`)}
