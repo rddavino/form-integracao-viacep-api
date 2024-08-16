@@ -35,7 +35,7 @@ const SuccessDialogBox = forwardRef(({ dialogBoxText, dialogBoxHeader }, ref) =>
           >
             <div className="bg-white p-10 lg:px-20">
               <div className="mb-5">
-                <div className="mt-3 flex flex-col align-middle">
+                <div className="mt-3 flex flex-col align-middle items-center">
                 <div className="h-12 w-12 mb-5">
                   <img src="src/assets/images/check-mark.png" alt="" />
                 </div>
