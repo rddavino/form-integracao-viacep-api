@@ -10,21 +10,21 @@ import React, { useRef } from 'react';
 
 const validations = Yup.object().shape({
   firstName: Yup.string()
-    .max(30, "Nome muito grande")
-    .required("Nome é obrigatório"),
+    .max(30, "Por favor, insira um nome com menos caracteres.")
+    .required("Ops! Precisamos saber o seu nome"),
   lastName: Yup.string()
-    .max(50, "Sobre nome muito grande")
-    .required("Sobrenome é obrigatório"),
+    .max(50, "Por favor, insira um sobrenome com menos caracteres.")
+    .required("Ops! Precisamos saber o seu sobrenome"),
   email: Yup.string()
-    .max(50, "Email muito grande")
+    .max(50, "Por favor, insira um email com menos caracteres.")
     .email("Email inválido")
-    .required("Email é obrigatório"),
+    .required("Ops! Precisamos saber o seu email"),
   cep: Yup.string()
-    .max(8, "Tamanho máximo 8 dígitos")
-    .required("Cep é obrigatório"),
-  logradouro: Yup.string().required("Logradouro é obrigatório"),
-  bairro: Yup.string().required("Bairro é obrigatório"),
-  localidade: Yup.string().required("Localidade é obrigatório"),
+    .max(8, "O valor CEP deve ter no máximo 8 dígitos")
+    .required("Ops! Precisamos saber o seu cep"),
+  logradouro: Yup.string().required("Ops! Precisamos saber o logradouro"),
+  bairro: Yup.string().required("Ops! Precisamos saber o bairro"),
+  localidade: Yup.string().required("Ops! Precisamos saber a localidade"),
 });
 
 function ContactForm() {
