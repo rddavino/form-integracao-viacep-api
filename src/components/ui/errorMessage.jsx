@@ -8,7 +8,7 @@ const ErrorMessage = ({ fieldName }) => {
 
   return (
     errors[fieldName] && (
-      <p className="text-red-500 text-sm p-0 m-0">
+      <p className="text-red-300 text-sm p-0 m-0">
         {errors[fieldName].message}
       </p>
     )
