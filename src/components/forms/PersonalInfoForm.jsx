@@ -1,31 +1,47 @@
-import React from 'react';
-import {useFormContext } from "react-hook-form"
+import React from "react";
+import { useFormContext } from "react-hook-form";
+import InputField from "../ui/inputField";
+import ErrorMessage from "../ui/errorMessage";
 
-const PersonalInfoForm = () => {  
+const PersonalInfoForm = () => {
+//   const {
+//     formState: { errors },
+//   } = useFormContext();
 
-    const { register, formState: { errors } } = useFormContext();
+  return (
+    <div className="flex flex-col gap-5 mb-5">
+      <div>
+        <InputField
+          type="text"
+          fieldName="firstName"
+          placeholder="Digite o seu nome"
+          disabled={false}
+        />
+        <ErrorMessage fieldName="firstName"/>
+      </div>
 
-    return (
-        <div>
-            <div>
-                <label htmlFor="firstName">Nome</label>
-                <input type='text' {...register("firstName")}/>
-                {errors.firstName && <p>{errors.firstName.message}</p>}
-            </div>
+      <div>
+        <InputField
+          type="text"
+          fieldName="lastName"
+          placeholder="Digite o seu sobrenome"
+          disabled={false}
+        />
+        <ErrorMessage fieldName="lastName"/>
+        
+      </div>
 
-            <div>
-                <label htmlFor="lastName">Sobrenome</label>
-                <input type='text' {...register("lastName")}/>
-                {errors.lastName && <p>{errors.lastName.message}</p>}
-            </div>
-
-            <div>
-                <label htmlFor="email">Email</label>
-                <input type='email' {...register("email")}/>
-                {errors.email && <p>{errors.email.message}</p>}
-            </div>
-        </div>
-    )
-}
+      <div>
+        <InputField
+          type="email"
+          fieldName="email"
+          placeholder="Digite o seu email"
+          disabled={false}
+        />
+        <ErrorMessage fieldName="email"/>
+      </div>
+    </div>
+  );
+};
 
 export default PersonalInfoForm;
