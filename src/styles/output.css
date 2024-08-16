@@ -574,6 +574,11 @@ video {
   margin: 0px;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -610,8 +615,8 @@ video {
   width: 100vw;
 }
 
-.max-w-md {
-  max-width: 28rem;
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .transform {
@@ -871,6 +876,11 @@ video {
 
   .sm\:p-0 {
     padding: 0px;
+  }
+
+  .sm\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .data-\[closed\]\:sm\:translate-y-0[data-closed] {
