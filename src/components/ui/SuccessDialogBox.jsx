@@ -1,12 +1,13 @@
 import { React, useState, forwardRef, useImperativeHandle } from "react";
 import Button from "./button";
 
-const SuccessDialogBox = forwardRef(({ modalText, modalHeader }, ref) => {
-  const [isOpen, setIsOpen] = useState(false);
+const SuccessDialogBox = forwardRef(({ dialogBoxText, dialogBoxHeader }, ref) => {
+  const [open, setOpen] = useState(false)
+
 
   useImperativeHandle(ref, () => ({
     open() {
-      setIsOpen(true);
+      setOpen(true);
     },
     close() {
       setIsOpen(false);
