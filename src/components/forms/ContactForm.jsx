@@ -43,6 +43,7 @@ function ContactForm() {
     if (modalRef.current) {
       modalRef.current.open();
     }
+    onReset();
   };
 
   const onReset = () => {
