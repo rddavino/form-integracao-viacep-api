@@ -39,7 +39,6 @@ function ContactForm() {
   const onSubmit = (data, event) => {
     console.log(data);
     event.preventDefault();
-    // Chamando o método open do Modal
     if (modalRef.current) {
       modalRef.current.open();
     }
@@ -57,15 +56,13 @@ function ContactForm() {
       localidade: "",
     });
   };  
-  const modalHeader = "Teste"
-  const modalText = "Suas informações foram enviadas com sucesso. Você está um passo mais próximo de realizar seu sonho!"
-  
+  const dialogBoxHeader = "Você está um passo mais próximo de realizar seu sonho!"
+  const dialogBoxText = "Suas informações foram enviadas com sucesso." 
   return (
     <>
-      <SuccessDialogBox ref={modalRef}>
-      <p>teste</p>
-      </SuccessDialogBox>
-      <div className="p-5 max-w-md ">
+      <SuccessDialogBox ref={modalRef} dialogBoxHeader={dialogBoxHeader} dialogBoxText={dialogBoxText}/>
+      <div className="flex justify-center align-middle">
+        <div className="max-w-md">
         <p className="text-white mb-5 font-bold text-center">
           O Minha Casa Minha Vida facilita a conquista do seu apartamento! Dê o
           primeiro passo para sair do aluguel!
@@ -113,6 +110,8 @@ function ContactForm() {
             </Button>
           </form>
         </FormProvider>
+        </div>
+
       </div>
     </>
   );
