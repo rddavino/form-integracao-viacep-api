@@ -4,6 +4,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import AddressForm from "./AddressForm";
 import PersonalInfoForm from "./PersonalInfoForm";
 import Button from "../ui/button";
+import SuccessDialogBox from "../ui/SuccessDialogBox";
+import React, { useRef } from 'react';
+
 
 const validations = Yup.object().shape({
   firstName: Yup.string()
@@ -31,9 +34,15 @@ function ContactForm() {
   });
 
   const { reset } = methods;
+  const modalRef = useRef();
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, event) => {
     console.log(data);
+    event.preventDefault();
+    // Chamando o método open do Modal
+    if (modalRef.current) {
+      modalRef.current.open();
+    }
   };
 
   const onReset = () => {
@@ -46,10 +55,15 @@ function ContactForm() {
       bairro: "",
       localidade: "",
     });
-  };
-
+  };  
+  const modalHeader = "Teste"
+  const modalText = "Suas informações foram enviadas com sucesso. Você está um passo mais próximo de realizar seu sonho!"
+  
   return (
     <>
+      <SuccessDialogBox ref={modalRef}>
+      <p>teste</p>
+      </SuccessDialogBox>
       <div className="p-5 max-w-md ">
         <p className="text-white mb-5 font-bold text-center">
           O Minha Casa Minha Vida facilita a conquista do seu apartamento! Dê o
