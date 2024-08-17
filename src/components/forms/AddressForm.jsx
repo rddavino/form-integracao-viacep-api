@@ -45,7 +45,7 @@ function AddressForm() {
           disabled={false}
         />
         <ErrorMessage fieldName="cep" />
-        {loading && <p className="text-white">Validando CEP...</p>}
+        {loading && <p className="text-white">Buscando CEP...</p>}
       </div>
 
       <div>

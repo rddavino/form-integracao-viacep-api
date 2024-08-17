@@ -10,8 +10,8 @@ const Validations = Yup.object().shape({
     .required("Ops! Precisamos saber o seu sobrenome"),
   cpf: Yup.string()
     .max(11, "Por favor, insira um CPF com menos caracteres.")
-    .test('cpf', 'CPF inválido', (value) =>ValidateCPF(value))
-    .required("Ops! Precisamos saber o seu CPF"),
+    .required("Ops! Precisamos saber o seu CPF")
+    .test('cpf', 'CPF inválido', (value) =>ValidateCPF(value)),
   email: Yup.string()
     .max(50, "Por favor, insira um email com menos caracteres.")
     .email("Email inválido")

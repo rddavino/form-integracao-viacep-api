@@ -35,7 +35,7 @@ const PersonalInfoForm = () => {
         <InputField
           type="text"
           fieldName="cpf"
-          placeholder="Digite o seu CPF"
+          placeholder="Digite o seu CPF (Apenas os números)"
           disabled={false}
         />
         <ErrorMessage fieldName="cpf"/>

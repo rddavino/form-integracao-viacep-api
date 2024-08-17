@@ -18,6 +18,7 @@ function ContactForm() {
     reset({
       firstName: "",
       lastName: "",
+      cpf: "",
       email: "",
       cep: "",
       logradouro: "",
