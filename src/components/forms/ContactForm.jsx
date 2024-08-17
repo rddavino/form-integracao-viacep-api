@@ -1,34 +1,15 @@
 import { useRef } from "react";
 import { useForm, FormProvider } from "react-hook-form";
-import * as Yup from "yup";
+import Validations from "../../validations/validations";
 import { yupResolver } from "@hookform/resolvers/yup";
 import AddressForm from "./AddressForm";
 import PersonalInfoForm from "./PersonalInfoForm";
 import Button from "../ui/button";
 import SuccessDialogBox from "../ui/SuccessDialogBox";
 
-const validations = Yup.object().shape({
-  firstName: Yup.string()
-    .max(30, "Por favor, insira um nome com menos caracteres.")
-    .required("Ops! Precisamos saber o seu nome"),
-  lastName: Yup.string()
-    .max(50, "Por favor, insira um sobrenome com menos caracteres.")
-    .required("Ops! Precisamos saber o seu sobrenome"),
-  email: Yup.string()
-    .max(50, "Por favor, insira um email com menos caracteres.")
-    .email("Email inválido")
-    .required("Ops! Precisamos saber o seu email"),
-  cep: Yup.string()
-    .max(8, "O valor CEP deve ter no máximo 8 dígitos")
-    .required("Ops! Precisamos saber o seu cep"),
-  logradouro: Yup.string().required("Ops! Precisamos saber o logradouro"),
-  bairro: Yup.string().required("Ops! Precisamos saber o bairro"),
-  localidade: Yup.string().required("Ops! Precisamos saber a localidade"),
-});
-
 function ContactForm() {
   const methods = useForm({
-    resolver: yupResolver(validations),
+    resolver: yupResolver(Validations),
     mode: "onChange",
   });
   const { reset } = methods;
