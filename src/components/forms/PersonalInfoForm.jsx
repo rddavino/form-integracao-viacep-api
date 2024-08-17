@@ -33,6 +33,16 @@ const PersonalInfoForm = () => {
 
       <div>
         <InputField
+          type="text"
+          fieldName="cpf"
+          placeholder="Digite o seu CPF"
+          disabled={false}
+        />
+        <ErrorMessage fieldName="cpf"/>
+      </div>
+
+      <div>
+        <InputField
           type="email"
           fieldName="email"
           placeholder="Digite o seu email"
