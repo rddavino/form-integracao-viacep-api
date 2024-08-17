@@ -1,4 +1,5 @@
 import * as Yup from "yup";
+import ValidateCPF from "./cpfValidation";
 
 const Validations = Yup.object().shape({
   firstName: Yup.string()
@@ -7,6 +8,10 @@ const Validations = Yup.object().shape({
   lastName: Yup.string()
     .max(50, "Por favor, insira um sobrenome com menos caracteres.")
     .required("Ops! Precisamos saber o seu sobrenome"),
+  cpf: Yup.string()
+    .max(11, "Por favor, insira um CPF com menos caracteres.")
+    .test('cpf', 'CPF inválido', (value) =>ValidateCPF(value))
+    .required("Ops! Precisamos saber o seu CPF"),
   email: Yup.string()
     .max(50, "Por favor, insira um email com menos caracteres.")
     .email("Email inválido")
