@@ -17,7 +17,6 @@ const SuccessDialogBox = forwardRef(
       },
       close() {
         setOpen(false);
-        console.log("chamou");
       },
     }));
     return (
@@ -55,7 +54,7 @@ const SuccessDialogBox = forwardRef(
                 <Button
                   type="button"
                   data-autofocus
-                  onClick={() => setOpen(false)}
+                  onClick={close}
                   className="w-full 
                         rounded-full
                         bg-teal-900
