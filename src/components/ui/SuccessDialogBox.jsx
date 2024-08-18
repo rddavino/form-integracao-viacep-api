@@ -7,6 +7,7 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 
+
 const SuccessDialogBox = forwardRef(
   ({ dialogBoxText, dialogBoxHeader }, ref) => {
     const [open, setOpen] = useState(false);
@@ -39,7 +40,7 @@ const SuccessDialogBox = forwardRef(
                 <div className="mb-5">
                   <div className="mt-3 flex flex-col align-middle items-center">
                     <div className="h-12 w-12 mb-5">
-                      <img src="./src/assets/images/check-mark.png" alt="" />
+                      <img src="/static/images/check-mark.png" alt="" />
                     </div>
                     <DialogTitle
                       as="h3"
