@@ -15,10 +15,13 @@ const SuccessDialogBox = forwardRef(
       open() {
         setOpen(true);
       },
-      close() {
-        setOpen(false);
-      },
     }));
+
+    const handleCloseClick = (event) => {
+      event.preventDefault();
+      setOpen(false);
+    };
+
     return (
       <Dialog open={open} onClose={setOpen} className="relative z-10">
         <DialogBackdrop
@@ -54,7 +57,7 @@ const SuccessDialogBox = forwardRef(
                 <Button
                   type="button"
                   data-autofocus
-                  onClick={close}
+                  onClick={handleCloseClick}
                   className="w-full 
                         rounded-full
                         bg-teal-900
@@ -69,7 +72,7 @@ const SuccessDialogBox = forwardRef(
                         flex
                         items-center"
                 >
-                  Entendi!
+                  Fechar
                 </Button>
               </div>
             </DialogPanel>

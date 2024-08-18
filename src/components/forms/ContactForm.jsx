@@ -29,9 +29,10 @@ function ContactForm() {
   const dialogBoxHeader =
     "Você está um passo mais próximo de realizar seu sonho!";
   const dialogBoxText = "Suas informações foram enviadas com sucesso.";
+
   const onSubmit = (data, event) => {
     console.log(data);
-    event.preventDefault();
+
     if (modalRef.current) {
       modalRef.current.open();
     }
