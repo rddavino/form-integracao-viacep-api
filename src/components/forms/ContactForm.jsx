@@ -30,7 +30,7 @@ function ContactForm() {
     "Você está um passo mais próximo de realizar seu sonho!";
   const dialogBoxText = "Suas informações foram enviadas com sucesso.";
 
-  const onSubmit = (data, event) => {
+  const onSubmit = (data) => {
     console.log(data);
 
     if (modalRef.current) {
