@@ -47,7 +47,7 @@ function ContactForm() {
         dialogBoxText={dialogBoxText}
       />
       <div className="flex justify-center align-middle">
-        <div className="max-w-sm sm:px-5 my-10">
+        <div className="p-6 max-w-sm">
           <p className="text-white mb-5 font-bold text-center">
             O Minha Casa Minha Vida facilita a conquista do seu apartamento! Dê
             o primeiro passo para sair do aluguel!
